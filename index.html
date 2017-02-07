@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+<header class="ccheader">
+    <h1><img src="dist/images/m.png"> Messageries</h1>
+</header>
+<hr />
+<br>
+<div class="wrapper">
+    <form method="post" action="" class="ccform">
+
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
+            <input class="ccformfield" type="text" placeholder="Subject" required id="objet">
+        </div>
+        <div class="ccfield-prepend">
+           <b> Etat:</b>
+        <label>
+            <input type="radio"  name="entree" value="Urgent"> Urgent
+        </label>
+        <label>
+            <input type="radio"  name="entree" value="Normal"> Normal
+        </label>
+        </div>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+            <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required id="message"></textarea>
+        </div>
+        <div class="ccfield-prepend">
+            <input class="ccbtn" type="submit" value="Submit" id="valider">
+        </div>
+    </form>
+</div>
+<center>
+<table cellspacing='0'>
+    <tr><th>Etat</th><th>Objet</th><th>Message</th></tr>
+    </thead>
+    <tbody id="messages"></tbody>
+</table>
+</center>
+
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+<script src="dist/js/main.js"></script>
+</body>
+</html>
